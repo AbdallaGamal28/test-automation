@@ -1,5 +1,5 @@
 import streamlit as st 
-from langchain.1lms import OpenAI
+from langchain.llms import OpenAI
 
 st.title("Quickstart Test Automation App')
          
