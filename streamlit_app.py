@@ -1,9 +1,9 @@
 import streamlit as st 
 from langchain.llms import OpenAI
 
-st.title("Quickstart Test Automation App')
+st.title("Quickstart Test Automation App")
          
-openai_api _key = st.sidebar.text_input ("OpenAI API Key')
+openai_api _key = st.sidebar.text_input ("OpenAI API Key")
 
 def generate_response (input_text):
   11m = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
