@@ -17,7 +17,10 @@ with st.form('my_form'):
   if submitted and openai_api_key.startswith('sk-'):
     generate_response(text)
 
-st.title("create a test automation script out of it ")
+import streamlit as st 
+from langchain.llms import OpenAI
+
+st.title("Create a test automation script out of it ")
 
 with st.form('my_form'):
   text = st.text_area('Enter text:', 'type the use case and ask for test script')
