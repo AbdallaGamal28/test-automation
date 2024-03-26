@@ -17,12 +17,23 @@ with st.form('my_form1'):
   if submitted and openai_api_key.startswith('sk-'):
     generate_response(text)
 
+
+st.title("Create a test automation  ")
+
+with st.form('my_form2'):
+  text = st.text_area('Enter text:', 'type the use case and ask for test script')
+  submitted = st.form_submit_button('Submit')
+  if not openai_api_key.startswith('sk-'):
+    st.warning('Please enter your OpenAI API key!', icon='⚠️') 
+  if submitted and openai_api_key.startswith('sk-'):
+    generate_response(text)
+
 import streamlit as st 
 from langchain.llms import OpenAI
 
 st.title("Create a test automation script out of it ")
 
-with st.form('my_form2'):
+with st.form('my_form3'):
   text = st.text_area('Enter text:', 'type the use case and ask for test script')
   submitted = st.form_submit_button('Submit')
   if not openai_api_key.startswith('sk-'):
